@@ -40,7 +40,7 @@ public class TabelaDeFreteController {
 
     @PutMapping
     @Transactional
-    public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizarTabelaDeFrete dados){
+    public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizarTabelaDeFrete dados) {
         var tabelaDeFrete = repository.getReferenceById(dados.id());
         tabelaDeFrete.atualizarDados(dados);
         return ResponseEntity.ok(new DadosDetalhamentoTabelaDeFrete(tabelaDeFrete));
