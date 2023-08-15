@@ -46,4 +46,12 @@ public class TabelaDeFreteController {
         return ResponseEntity.ok(new DadosDetalhamentoTabelaDeFrete(tabelaDeFrete));
     }
 
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity deletar(@PathVariable Long id) {
+        var tabela = repository.getReferenceById(id);
+        repository.deleteById(tabela.getId());
+        return ResponseEntity.noContent().build();
+    }
+
 }
