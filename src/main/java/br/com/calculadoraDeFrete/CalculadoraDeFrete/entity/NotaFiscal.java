@@ -1,5 +1,6 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.entity;
 
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosAtualizarNotaFiscal;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroNotaFiscal;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -29,5 +30,17 @@ public class NotaFiscal {
         this.nomeFornecedor = dados.nome();
         this.valorDaNf = dados.valor();
         this.dataDeEmissao = dados.data();
+    }
+
+    public void atualizarDados(DadosAtualizarNotaFiscal dados) {
+        if (dados.nome() != null) {
+            this.nomeFornecedor = dados.nome();
+        }
+        if (dados.valor() != null) {
+            this.valorDaNf = dados.valor();
+        }
+        if (dados.data() != null) {
+            this.dataDeEmissao = dados.data();
+        }
     }
 }

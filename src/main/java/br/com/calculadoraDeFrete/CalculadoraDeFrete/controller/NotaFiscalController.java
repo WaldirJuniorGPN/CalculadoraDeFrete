@@ -1,17 +1,15 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.controller;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroNotaFiscal;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosDetalhamentoNotaFiscal;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.*;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.entity.NotaFiscal;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.repository.NotaFiscalRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
@@ -31,4 +29,19 @@ public class NotaFiscalController {
 
         return ResponseEntity.created(uri).body(new DadosDetalhamentoNotaFiscal(notaFiscal));
     }
+
+    @GetMapping
+    public ResponseEntity<Page<DadosListagemNotaFiscal>> listar(Pageable paginacao) {
+        var page = repository.findAll(paginacao).map(DadosListagemNotaFiscal::new);
+        return ResponseEntity.ok(page);
+    }
+
+    @PutMapping
+    @Transactional
+    public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizarNotaFiscal dados) {
+        var notaFiscal = repository.getReferenceById(dados.id());
+        notaFiscal.atualizarDados(dados);
+        return ResponseEntity.ok(new DadosDetalhamentoNotaFiscal(notaFiscal));
+    }
+
 }
