@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity
+@Entity(name = "NotaFiscal")
 @Table(name = "notas_fiscais")
 @AllArgsConstructor
 @NoArgsConstructor
