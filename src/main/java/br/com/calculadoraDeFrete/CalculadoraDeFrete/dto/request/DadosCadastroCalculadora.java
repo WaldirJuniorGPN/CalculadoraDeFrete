@@ -1,4 +1,4 @@
-package br.com.calculadoraDeFrete.CalculadoraDeFrete.dto;
+package br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request;
 
 import jakarta.validation.constraints.NotNull;
 

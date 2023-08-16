@@ -1,9 +1,9 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.controller;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosAtualizarTabelaDeFrete;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroTabelaDeFrete;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosDetalhamentoTabelaDeFrete;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosListagemTabelaDeFrete;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosAtualizarTabelaDeFrete;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosCadastroTabelaDeFrete;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.response.DadosDetalhamentoTabelaDeFrete;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.response.DadosListagemTabelaDeFrete;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.entity.TabelaDeFrete;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.repository.TabelaDeFreteRepository;
 import jakarta.transaction.Transactional;

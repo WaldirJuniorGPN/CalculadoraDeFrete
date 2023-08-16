@@ -1,9 +1,6 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.service;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroCalculadora;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.entity.TabelaDeFrete;
-
-import java.math.BigDecimal;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosCadastroCalculadora;
 
 public interface calculadora {
 

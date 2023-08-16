@@ -1,7 +1,7 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.entity;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosAtualizarTabelaDeFrete;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroTabelaDeFrete;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosAtualizarTabelaDeFrete;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosCadastroTabelaDeFrete;
 import jakarta.persistence.*;
 import lombok.*;
 

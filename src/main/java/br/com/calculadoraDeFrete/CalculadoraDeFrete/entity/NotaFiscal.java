@@ -1,7 +1,7 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.entity;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosAtualizarNotaFiscal;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroNotaFiscal;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosAtualizarNotaFiscal;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosCadastroNotaFiscal;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

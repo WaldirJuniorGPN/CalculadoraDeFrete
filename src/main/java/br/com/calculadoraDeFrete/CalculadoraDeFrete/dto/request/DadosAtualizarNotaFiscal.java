@@ -1,17 +1,15 @@
-package br.com.calculadoraDeFrete.CalculadoraDeFrete.dto;
+package br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public record DadosCadastroNotaFiscal(
-        @NotBlank
+public record DadosAtualizarNotaFiscal(
+        @NotNull
+        Long id,
         String nome,
-        @NotNull
         BigDecimal valor,
-        @NotNull
         LocalDate data,
         Double pesoCubado
 ) {

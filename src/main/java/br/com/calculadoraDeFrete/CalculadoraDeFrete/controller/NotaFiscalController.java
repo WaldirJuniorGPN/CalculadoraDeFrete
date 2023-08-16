@@ -1,6 +1,9 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.controller;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.*;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosAtualizarNotaFiscal;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosCadastroNotaFiscal;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.response.DadosDetalhamentoNotaFiscal;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.response.DadosListagemNotaFiscal;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.entity.NotaFiscal;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.repository.NotaFiscalRepository;
 import jakarta.transaction.Transactional;

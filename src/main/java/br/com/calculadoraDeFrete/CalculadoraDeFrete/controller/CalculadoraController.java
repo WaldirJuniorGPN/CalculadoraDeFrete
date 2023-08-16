@@ -1,8 +1,7 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.controller;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroCalculadora;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosDetalhamentoCalculadora;
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.repository.CalculadoraRepository;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosCadastroCalculadora;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.response.DadosDetalhamentoCalculadora;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.service.CalculadoraDeFreteService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;

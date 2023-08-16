@@ -1,4 +1,4 @@
-package br.com.calculadoraDeFrete.CalculadoraDeFrete.dto;
+package br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.response;
 
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.entity.NotaFiscal;
 

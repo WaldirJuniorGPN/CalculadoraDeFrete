@@ -1,6 +1,6 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.service;
 
-import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroCalculadora;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.request.DadosCadastroCalculadora;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.repository.NotaFiscalRepository;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.repository.TabelaDeFreteRepository;
 import lombok.Getter;
