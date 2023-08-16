@@ -44,4 +44,11 @@ public class NotaFiscalController {
         return ResponseEntity.ok(new DadosDetalhamentoNotaFiscal(notaFiscal));
     }
 
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity deletar(@PathVariable Long id) {
+        repository.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
