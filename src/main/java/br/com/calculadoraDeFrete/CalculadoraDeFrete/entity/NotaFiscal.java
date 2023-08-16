@@ -23,13 +23,15 @@ public class NotaFiscal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeFornecedor;
-    private BigDecimal valorDaNf;
     private LocalDate dataDeEmissao;
+    private BigDecimal valorDaNf;
+    private Double pesoCubado;
 
     public NotaFiscal(DadosCadastroNotaFiscal dados) {
         this.nomeFornecedor = dados.nome();
         this.valorDaNf = dados.valor();
         this.dataDeEmissao = dados.data();
+        this.pesoCubado = dados.pesoCubado();
     }
 
     public void atualizarDados(DadosAtualizarNotaFiscal dados) {
@@ -41,6 +43,9 @@ public class NotaFiscal {
         }
         if (dados.data() != null) {
             this.dataDeEmissao = dados.data();
+        }
+        if (dados.pesoCubado() != null) {
+            this.pesoCubado = dados.pesoCubado();
         }
     }
 }

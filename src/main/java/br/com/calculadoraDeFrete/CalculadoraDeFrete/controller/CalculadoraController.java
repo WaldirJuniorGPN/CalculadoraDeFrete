@@ -1,7 +1,9 @@
 package br.com.calculadoraDeFrete.CalculadoraDeFrete.controller;
 
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosCadastroCalculadora;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.dto.DadosDetalhamentoCalculadora;
 import br.com.calculadoraDeFrete.CalculadoraDeFrete.repository.CalculadoraRepository;
+import br.com.calculadoraDeFrete.CalculadoraDeFrete.service.CalculadoraDeFreteService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalculadoraController {
 
     @Autowired
-    CalculadoraRepository repository;
+    CalculadoraDeFreteService service;
 
     @PostMapping
     @Transactional
     public ResponseEntity calcularFrete(@RequestBody @Valid DadosCadastroCalculadora dados) {
-
-        return ResponseEntity.ok(null);
+        service.calcular(dados);
+        return ResponseEntity.ok(new DadosDetalhamentoCalculadora(service.getValor()));
     }
 }

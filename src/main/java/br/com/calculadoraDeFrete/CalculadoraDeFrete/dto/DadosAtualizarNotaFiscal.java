@@ -10,6 +10,7 @@ public record DadosAtualizarNotaFiscal(
         Long id,
         String nome,
         BigDecimal valor,
-        LocalDate data
+        LocalDate data,
+        Double pesoCubado
 ) {
 }

@@ -6,8 +6,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public record DadosDetalhamentoNotaFiscal(Long id, String nomeFornecedor, BigDecimal valorDaNf,
-                                          LocalDate dataDeEmissao) {
+                                          LocalDate dataDeEmissao, Double pesoCubado) {
     public DadosDetalhamentoNotaFiscal(NotaFiscal dados) {
-        this(dados.getId(), dados.getNomeFornecedor(), dados.getValorDaNf(), dados.getDataDeEmissao());
+        this(dados.getId(), dados.getNomeFornecedor(), dados.getValorDaNf(), dados.getDataDeEmissao(), dados.getPesoCubado());
     }
 }

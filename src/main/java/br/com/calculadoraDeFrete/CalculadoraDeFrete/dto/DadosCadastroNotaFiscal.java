@@ -12,6 +12,7 @@ public record DadosCadastroNotaFiscal(
         @NotNull
         BigDecimal valor,
         @NotNull
-        LocalDate data
+        LocalDate data,
+        Double pesoCubado
 ) {
 }
