@@ -12,7 +12,7 @@ import java.math.RoundingMode;
 
 @Service
 @Getter
-public class CalculadoraDeFreteService implements calculadora {
+public class CalculadoraDeFreteService implements Calculadora {
 
     private BigDecimal valor = BigDecimal.ZERO;
 
